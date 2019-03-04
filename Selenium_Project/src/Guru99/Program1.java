@@ -18,8 +18,8 @@ public class Program1 {
 	public static void main(String[] args) throws InterruptedException, IOException {
 		driver=new FirefoxDriver();
 		driver.get("http://www.demo.guru99.com/V4/");
-		driver.findElement(By.name("uid")).sendKeys("mngr175232");
-		driver.findElement(By.name("password")).sendKeys("unubYnU");
+		driver.findElement(By.name("uid")).sendKeys("mngr179727");
+		driver.findElement(By.name("password")).sendKeys("jUqEmav");
 		driver.findElement(By.name("btnLogin")).sendKeys(Keys.ENTER);
 		Thread.sleep(5000);
 	/**
@@ -42,7 +42,7 @@ public class Program1 {
 		File f1=e1.getScreenshotAs(OutputType.FILE);
 		File f2=new File(".\\Screenshot\\newcustomer1.jpg");
 		FileUtils.copyFile(f1, f2);
-			
+	
 		//New Customer2
 		driver.findElement(By.linkText("New Customer")).click();
 		driver.findElement(By.name("name")).sendKeys("tharan A");
@@ -54,7 +54,7 @@ public class Program1 {
 		driver.findElement(By.name("state")).sendKeys("Tamilnadu");
 		driver.findElement(By.name("pinno")).sendKeys("600043");
 		driver.findElement(By.name("telephoneno")).sendKeys("9876512247");
-		driver.findElement(By.name("emailid")).sendKeys("qqwweerrttyy@gmail.com");
+		driver.findElement(By.name("emailid")).sendKeys("qqwwe@gmail.com");
 		driver.findElement(By.name("password")).sendKeys("theguy");
 		driver.findElement(By.name("sub")).click();
 		Thread.sleep(5000);
@@ -63,22 +63,24 @@ public class Program1 {
 		File f2=new File(".\\Screenshot\\newcustomer2.jpg");
 		FileUtils.copyFile(f1, f2);
 		**/
+		
 		//New account
-		//newAccount("16291", "1001");
-		//newAccount("96526","1001");
+		newAccount("99499", "1000");
+		newAccount("39808","2000");
 		//newAccount("96526","2000");	
 		//Balance enquiry
-		//balanceEnquiry("56444");
+	//	balanceEnquiry("56444");
 		//deposit
-		deposit("56445","10000","money for Levis pant");
+		
+		//deposit("56445","10000","money for Levis pant");
 		//fund transfer
-		fundTransfer("56445","56444","5000","amount for shopping");	
+		//fundTransfer("56445","56444","5000","amount for shopping");	
 		//Withdrawal money
-		withdrawalMoney("56444","1000","for shopping");
+		//withdrawalMoney("56444","1000","for shopping");
 		//Balance enquiry
-		balanceEnquiry("56444");
+		//balanceEnquiry("56444");
 		//mini Statement
-		miniStatement("56444");
+		//miniStatement("56444");
 		//delete account
 		//deleteAccount("56445");
 		//fund transfer to deleted account
@@ -92,13 +94,18 @@ public class Program1 {
 		driver.findElement(By.linkText("Edit Customer")).click();
 		driver.findElement(By.name("cusid")).sendKeys("96526");
 		driver.findElement(By.name("AccSubmit")).sendKeys(Keys.ENTER);
-		**/
+		
+		
 	}
-	private static void miniStatement(String accNo) {
+	
+	**/
+	}
+		private static void miniStatement(String accNo) {
 		driver.findElement(By.linkText("Mini Statement")).click();
 		driver.findElement(By.name("accountno")).sendKeys(accNo);
 		driver.findElement(By.name("AccSubmit")).sendKeys(Keys.ENTER);
 	}
+
 	private static void newAccount(String customerId, String initialDeposit) throws InterruptedException {
 		driver.findElement(By.linkText("New Account")).click();
 		driver.findElement(By.name("cusid")).sendKeys(customerId);
@@ -112,6 +119,7 @@ public class Program1 {
 		File f3=e2.getScreenshotAs(OutputType.FILE);
 		File f4=new File(".\\newaccount\\accountdetails.jpg");
 	}
+	
 	private static void withdrawalMoney(String accNo, String amount,
 			String description) {
 		driver.findElement(By.linkText("Withdrawal")).click();
@@ -141,6 +149,7 @@ public class Program1 {
 		driver.findElement(By.name("desc")).sendKeys(description);
 		driver.findElement(By.name("AccSubmit")).sendKeys(Keys.ENTER);	
 	}
+	
 	private static void balanceEnquiry(String accNo) {
 		driver.findElement(By.linkText("Balance Enquiry")).click();
 		driver.findElement(By.name("accountno")).sendKeys(accNo);//56444
@@ -148,5 +157,7 @@ public class Program1 {
 		EventFiringWebDriver e3=new EventFiringWebDriver(driver);
 		File f5=e3.getScreenshotAs(OutputType.FILE);
 		File f6=new File(".\\Balanceenquiry\\balance.jpg");
+
 	}
-}
+	}	
+	
