@@ -30,7 +30,7 @@ public class NewTest {
 			driver.findElement(By.name("state")).sendKeys("Tamilnadu");
 			driver.findElement(By.name("pinno")).sendKeys("600040");
 			driver.findElement(By.name("telephoneno")).sendKeys("8977894321");
-			driver.findElement(By.name("emailid")).sendKeys("giriadmin@gmail.com");
+			driver.findElement(By.name("emailid")).sendKeys("girikjhhggggadmin@gmail.com");
 			driver.findElement(By.name("password")).sendKeys("Believethat");
 			driver.findElement(By.name("sub")).click();
 			Thread.sleep(5000);
@@ -50,7 +50,7 @@ public class NewTest {
 			driver.findElement(By.name("state")).sendKeys("Tamilnadu");
 			driver.findElement(By.name("pinno")).sendKeys("600043");
 			driver.findElement(By.name("telephoneno")).sendKeys("9876512247");
-			driver.findElement(By.name("emailid")).sendKeys("qqwwe@gmail.com");
+			driver.findElement(By.name("emailid")).sendKeys("qqhghghffd@gmail.com");
 			driver.findElement(By.name("password")).sendKeys("theguy");
 			driver.findElement(By.name("sub")).click();
 			Thread.sleep(5000);
@@ -58,8 +58,8 @@ public class NewTest {
 			File f3=e1.getScreenshotAs(OutputType.FILE);
 			File f4=new File(".\\Screenshot\\newcustomer2.jpg");
 			FileUtils.copyFile(f1, f2);
+	**/	
 		
-	**/		
 			//New account
 			//newAccount("99499", "10000");
 			//newAccount("39808","20000");
@@ -76,11 +76,11 @@ public class NewTest {
 			//Balance enquiry
 			balanceEnquiry("57286");
 			//mini Statement
-			//miniStatement("57285");
+			miniStatement("57285");
 			//delete account
-			//deleteAccount("57286");
+			deleteAccount("57286");
 			//fund transfer to deleted account
-			//fundTransfer("57285","57286","5000","amount for shopping");
+			fundTransfer("57285","57286","5000","amount for shopping");
 		/**
 			//delete customer
 			driver.findElement(By.linkText("Delete Customer")).click();
